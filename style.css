@@ -1,1 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  font-size: 14px;
+}
+
+/* HEADER */
+.header {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.header h1 {
+  font-size: 26px;
+}
+
+.header p {
+  margin: 8px 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+}
+
+.card p {
+  font-size: 13px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  margin-top: 25px;
+}
 
