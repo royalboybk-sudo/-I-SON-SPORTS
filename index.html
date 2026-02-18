@@ -1,27 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>I SON SPORTS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I SON SPORTS | Cricket Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+      background: #0b3d2e;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #111;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: #e8f5f0;
+    }
+    .hero h1 {
+      font-size: 40px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1>I SON SPORTS</h1>
-    <p>Local Cricket Shop</p>
-    <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Contact on WhatsApp</a>
-  </header>
+<header>
+  <h1>I SON SPORTS</h1>
+  <p>Your Trusted Cricket Equipment Store</p>
+</header>
 
-  <!-- PRODUCTS -->
-  <section class="products">
-    <h2>Our Products</h2>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <div class="cards">
+<section class="hero" id="home">
+  <h1>Quality Cricket Gear</h1>
+  <p>Bats, Balls, Gloves, Pads & More</p>
+</section>
 
-      <div class="card">
-        <img src="images/bat.jpg" alt="Cricket Bat">
-        <h3>English Willow Bat</h3>
-        <p>Premium quality bat</
+<section class="section" id="products">
+  <h2>Our Products</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Cricket Bat">
+      <h3>English Willow Bat</h3>
+      <p>Premium quality for professionals.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Cricket Ball">
+      <h3>Leather Cricket Ball</h3>
+      <p>Match & practice balls available.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/400x300" alt="Gloves">
+      <h3>Batting Gloves</h3>
+      <p>Comfort & strong grip.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <p>
+    I SON SPORTS is a local cricket shop providing reliable and affordable
+    cricket equipment for beginners to professionals.
+  </p>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>📍 Location: Your City</p>
+  <p>📞 Phone: +91 XXXXXXXXXX</p>
+  <p>📧 Email: example@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 I SON SPORTS. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
