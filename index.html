@@ -2,191 +2,94 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I SON SPORTS</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
 
 body{
-  background:#000;
-  overflow-x:hidden;
+    background:#0b0b0b;
+    color:white;
+    overflow-x:hidden;
 }
 
 /* ===== TOP BAR ===== */
 .topbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:90px;
-  z-index:100;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 40px;
-  background:rgba(0,0,0,0.75);
-  backdrop-filter: blur(6px);
+    width:100%;
+    height:90px;
+    display:flex;
+    align-items:center;
+    padding:0 40px;
+    background:#000;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:16px;
+.topbar img{
+    height:80px;
 }
 
-.logo img{
-  height:80px;
+.topbar h1{
+    margin-left:15px;
+    font-size:36px;
+    color:#4fc3f7; /* sky blue */
+    letter-spacing:2px;
 }
 
-.logo span{
-  color:#4fc3ff;
-  font-size:28px;
-  font-weight:700;
-  letter-spacing:2.5px;
+/* ===== SEARCH BAR ===== */
+.search-section{
+    margin-top:130px;
+    display:flex;
+    justify-content:center;
 }
 
-.nav-buttons{
-  display:flex;
-  gap:22px;
+.search-section input{
+    width:400px;
+    padding:12px 20px;
+    border-radius:30px;
+    border:none;
+    outline:none;
+    font-size:16px;
 }
 
-.nav-buttons button{
-  background:transparent;
-  border:1px solid #4fc3ff;
-  color:#4fc3ff;
-  padding:8px 20px;
-  border-radius:24px;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.3s ease;
-}
-
-.nav-buttons button:hover{
-  background:#4fc3ff;
-  color:#000;
-  box-shadow:0 0 14px rgba(79,195,255,0.8);
-}
-
-/* ===== HERO ===== */
-.hero{
-  position:relative;
-  width:100%;
-  height:100vh;
-  padding-top:90px;
-  overflow:hidden;
-}
-
-.hero img.bg{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  animation: zoomFade 2s ease forwards;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle, rgba(255,200,120,0.18), rgba(0,0,0,0.92));
-  z-index:1;
-}
-
-/* ===== SEARCH AREA ===== */
-.search-area{
-  position:relative;
-  z-index:2;
-  margin-top:40px;
-  text-align:center;
-}
-
-.search-area input{
-  width:380px;
-  max-width:85%;
-  padding:14px 22px;
-  border-radius:30px;
-  border:none;
-  outline:none;
-  font-size:16px;
-}
-
-.search-area h1{
-  margin-top:26px;
-  color:#fff;
-  font-size:40px;
-  letter-spacing:4px;
-  font-weight:700;
+/* ===== TITLE ===== */
+.title{
+    text-align:center;
+    margin-top:30px;
+    font-size:42px;
+    font-weight:bold;
+    letter-spacing:3px;
+    background:linear-gradient(90deg,#ffffff,#ffd700);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 /* ===== COMPONENT BUTTONS ===== */
 .components{
-  position:absolute;
-  z-index:2;
-  top:65%;               /* 👈 pushed down */
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:50px;
-  align-items:center;
-  opacity:0;
-  animation: fadeUp 1.5s ease forwards;
-  animation-delay:1s;
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:40px;
 }
 
-.components button{
-  background:none;
-  border:none;
-  cursor:pointer;
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.components button:hover{
-  transform: translateY(-10px) scale(1.12);
-  filter: drop-shadow(0 0 15px rgba(79,195,255,0.7));
+.components a{
+    display:block;
+    transition:0.3s ease;
 }
 
 .components img{
-  width:110px;
+    width:160px;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes zoomFade{
-  from{opacity:0; transform:scale(1.12);}
-  to{opacity:1; transform:scale(1);}
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translate(-50%, 40px);}
-  to{opacity:1; transform:translate(-50%, 0);}
-}
-
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .topbar{ padding:0 20px; height:75px; }
-  .hero{ padding-top:75px; }
-
-  .logo img{ height:55px; }
-  .logo span{ font-size:20px; }
-
-  .search-area h1{
-    font-size:26px;
-    letter-spacing:2px;
-  }
-
-  .components{
-    gap:25px;
-    top:70%;
-  }
-
-  .components img{
-    width:80px;
-  }
+.components a:hover{
+    transform:translateY(-10px) scale(1.05);
 }
 </style>
 </head>
@@ -195,36 +98,27 @@ body{
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="logo">
-    <img src="images/logo.png">
-    <span>I SON SPORTS</span>
-  </div>
-
-  <div class="nav-buttons">
-    <button>Home</button>
-    <button>Call Us</button>
-    <button>WhatsApp Us</button>
-  </div>
+    <img src="images/logo.png" alt="logo">
+    <h1>I SON SPORTS</h1>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="images/Frame1.png" class="bg">
-
-  <!-- Search + Heading -->
-  <div class="search-area">
+<!-- SEARCH -->
+<div class="search-section">
     <input type="text" placeholder="Search sports equipment...">
-    <h1>CHOOSE YOUR GAME</h1>
-  </div>
+</div>
 
-  <!-- Components -->
-  <div class="components">
-    <button><img src="images/Component1.svg"></button>
-    <button><img src="images/Component2.svg"></button>
-    <button><img src="images/Component3.svg"></button>
-    <button><img src="images/Component4.svg"></button>
-  </div>
-</section>
+<!-- TITLE -->
+<div class="title">
+    CHOOSE YOUR GAME
+</div>
+
+<!-- COMPONENT BUTTONS -->
+<div class="components">
+    <a href="#"><img src="images/Component1.svg"></a>
+    <a href="#"><img src="images/Component2.svg"></a>
+    <a href="#"><img src="images/Component3.svg"></a>
+    <a href="#"><img src="images/Component4.svg"></a>
+</div>
 
 </body>
 </html>
