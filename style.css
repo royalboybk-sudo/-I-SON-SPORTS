@@ -127,3 +127,45 @@
   transform:scale(1.1);
   filter:drop-shadow(0 0 25px gold);
 }
+
+
+/* CONTACT BUTTONS */
+.contact-buttons{
+  position:fixed;
+  bottom:3vh;
+  left:50%;
+  transform:translateX(-50%);
+  width:90vw;
+  display:flex;
+  gap:4vw;
+  z-index:20;
+}
+
+.contact-buttons a{
+  flex:1;
+  text-align:center;
+  padding:2.2vh 0;
+  font-size:5vw;
+  font-weight:800;
+  border-radius:14px;
+  text-decoration:none;
+  color:#fff;
+}
+
+/* CALL */
+.call-btn{
+  background:#1e88e5;
+  box-shadow:0 0 18px rgba(30,136,229,0.7);
+}
+
+/* WHATSAPP */
+.whatsapp-btn{
+  background:#25D366;
+  box-shadow:0 0 18px rgba(37,211,102,0.7);
+}
+
+/* PRESS EFFECT */
+.contact-buttons a:active{
+  transform:scale(0.96);
+}
+
