@@ -10,24 +10,24 @@
   position:fixed;
   top:0;
   width:100%;
-  height:80px;
+  height:90px;
   display:flex;
   align-items:center;
-  padding:0 20px;
+  padding:0 18px;
   background:#000;
   z-index:10;
 }
 
 .logo{
-  height:60px;
+  height:80px;
 }
 
 .brand-name{
-  margin-left:12px;
-  font-size:24px;
-  font-weight:700;
+  margin-left:14px;
+  font-size:28px;
+  font-weight:800;
   color:#4fc3ff;
-  letter-spacing:2px;
+  letter-spacing:3px;
 }
 
 /* HERO */
@@ -43,62 +43,64 @@
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:brightness(0.7);
+  filter:brightness(0.65);
 }
 
 /* SEARCH */
 .search-area{
   position:absolute;
-  top:100px;
+  top:120px;
   left:50%;
   transform:translateX(-50%);
   z-index:2;
 }
 
 .search-area input{
-  width:260px;
-  padding:12px;
-  border-radius:25px;
+  width:300px;
+  padding:16px;
+  font-size:16px;
+  border-radius:30px;
   border:none;
   outline:none;
 }
 
-/* CHOOSE TEXT */
+/* CHOOSE YOUR GAME */
 .choose-text{
   position:absolute;
-  top:42%;
+  top:45%;
   left:50%;
   transform:translateX(-50%);
-  font-size:26px;
+  font-size:34px;
   color:#fff;
-  letter-spacing:3px;
-  font-weight:700;
+  letter-spacing:4px;
+  font-weight:900;
+  text-align:center;
   z-index:2;
+
   animation: glowText 2s infinite alternate;
 }
 
-/* TEXT HOVER / GLOW */
 @keyframes glowText{
   from{
-    text-shadow:0 0 6px #fff;
+    text-shadow:0 0 8px #fff;
   }
   to{
     text-shadow:
-      0 0 8px #fff,
-      0 0 18px rgba(255,200,120,0.8),
-      0 0 30px rgba(255,180,80,0.7);
+      0 0 10px #fff,
+      0 0 22px rgba(255,200,120,0.9),
+      0 0 40px rgba(255,170,70,0.8);
   }
 }
 
-/* COMPONENT GRID (2 x 2) */
+/* GAME COMPONENTS (BIG TOUCH TARGETS) */
 .components{
   position:absolute;
-  top:50%;
+  top:55%;
   left:50%;
   transform:translateX(-50%);
   display:grid;
   grid-template-columns:repeat(2, 1fr);
-  gap:25px;
+  gap:35px;
   z-index:2;
 }
 
@@ -110,28 +112,28 @@
 }
 
 .game-btn img{
-  width:110px;
+  width:150px;          /* 👈 BIG */
   transition:transform 0.3s ease, filter 0.3s ease;
 }
 
 .game-btn:hover img{
-  transform:scale(1.1);
-  filter:drop-shadow(0 0 12px gold);
+  transform:scale(1.15);
+  filter:drop-shadow(0 0 18px gold);
 }
 
-/* DESKTOP ENHANCEMENT */
+/* DESKTOP */
 @media(min-width:768px){
   .choose-text{
-    font-size:42px;
-    top:55%;
+    font-size:46px;
+    top:58%;
   }
 
   .components{
     grid-template-columns:repeat(4, 1fr);
-    top:65%;
+    top:68%;
   }
 
   .game-btn img{
-    width:120px;
+    width:140px;
   }
 }
