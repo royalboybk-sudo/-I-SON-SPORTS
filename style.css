@@ -67,7 +67,7 @@
 /* CHOOSE YOUR GAME */
 .choose-text{
   position:absolute;
-  top:40vh;
+  top:30vh;
   left:50%;
   transform:translateX(-50%);
   font-size:8vw;   /* VERY BIG */
@@ -94,7 +94,7 @@
 /* COMPONENTS */
 .components{
   position:absolute;
-  top:52vh;
+  top:45vh;
   left:50%;
   transform:translateX(-50%);
   display:grid;
