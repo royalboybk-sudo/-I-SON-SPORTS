@@ -24,7 +24,7 @@
 
 .brand-name{
   margin-left:3vw;
-  font-size:7vw;   /* BIG */
+  font-size:7vw;
   font-weight:900;
   color:#4fc3ff;
   letter-spacing:0.4vw;
@@ -64,13 +64,13 @@
   outline:none;
 }
 
-/* CHOOSE YOUR GAME */
+/* CHOOSE TEXT */
 .choose-text{
   position:absolute;
-  top:20vh;
+  top:40vh;
   left:50%;
   transform:translateX(-50%);
-  font-size:vw;   /* VERY BIG */
+  font-size:8vw;
   color:#fff;
   letter-spacing:0.6vw;
   font-weight:900;
@@ -91,10 +91,10 @@
   }
 }
 
-/* COMPONENTS */
+/* COMPONENTS GRID */
 .components{
   position:absolute;
-  top:45vh;
+  top:48vh;            /* 👈 bottom se thoda upar */
   left:50%;
   transform:translateX(-50%);
   display:grid;
@@ -103,13 +103,21 @@
   z-index:2;
 }
 
+/* GAME BUTTONS (ALL SAME SIZE) */
 .game-btn{
+  width:32vw;          /* 👈 balanced size */
+  height:32vw;
   background:none;
   border:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .game-btn img{
-  width:36vw;   /* HUGE BUTTONS */
+  width:100%;
+  height:100%;
+  object-fit:contain;  /* 👈 Component2 bhi same size */
   transition:transform 0.3s ease, filter 0.3s ease;
 }
 
