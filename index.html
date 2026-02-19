@@ -44,34 +44,39 @@ body{
   z-index:1;
 }
 
-/* ===== CENTER COMPONENTS ===== */
+/* ===== CENTER COMPONENTS (ONE LINE) ===== */
 .components{
   position:absolute;
   z-index:2;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap:40px;
+  display:flex;
+  gap:50px;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
   animation: fadeUp 1.5s ease forwards;
   animation-delay:1s;
-  opacity:0;
 }
 
+/* Button style */
 .components button{
   background:none;
   border:none;
   cursor:pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
+/* Hover animation */
 .components button:hover{
-  transform: scale(1.08);
+  transform: translateY(-10px) scale(1.12);
+  filter: drop-shadow(0 0 15px rgba(255,200,120,0.7));
 }
 
+/* SVG size */
 .components img{
-  width:120px;
+  width:110px;
   height:auto;
 }
 
@@ -90,7 +95,7 @@ body{
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translate(-50%,-30%);
+    transform:translate(-50%,-40%);
   }
   to{
     opacity:1;
@@ -99,14 +104,13 @@ body{
 }
 
 /* ===== Mobile ===== */
-@media(max-width:600px){
+@media(max-width:768px){
   .components{
-    grid-template-columns:1fr;
     gap:25px;
   }
 
   .components img{
-    width:100px;
+    width:80px;
   }
 }
 </style>
@@ -118,7 +122,7 @@ body{
   <!-- Background -->
   <img src="images/Frame1.png" class="bg" alt="Background">
 
-  <!-- Center SVG Buttons -->
+  <!-- Center Components -->
   <div class="components">
     <button>
       <img src="images/Component1.svg" alt="Component 1">
