@@ -66,8 +66,8 @@
 
 /* CHOOSE TEXT */
 .choose-text{
-  position:absolute;
-  top:10vh;   /* 👈 components se clearly upar */
+  position:none;
+  top:20vh;   /* 👈 components se clearly upar */
   left:50%;
   transform:translateX(-50%);
   font-size:8vw;
