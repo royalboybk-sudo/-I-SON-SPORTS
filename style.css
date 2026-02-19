@@ -1,88 +1,82 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
+/* BODY */
 body {
-  background: #f2f2f2;
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  overflow-x: hidden;
 }
 
-/* HEADER */
-.header {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 30px 15px;
-}
-
-.header h1 {
-  font-size: 26px;
-}
-
-.header p {
-  margin: 8px 0 15px;
-}
-
-.btn {
-  display: inline-block;
-  background: #25d366;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-/* PRODUCTS */
-.products {
-  padding: 30px 15px;
-  text-align: center;
-}
-
-.products h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.cards {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #fff;
-  width: 200px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.card img {
+/* HERO SECTION */
+.hero {
+  position: relative;
   width: 100%;
-  border-radius: 6px;
+  height: 100vh;
+  background: radial-gradient(
+    circle at center,
+    #1a1a1a 0%,
+    #000000 70%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card h3 {
-  margin: 8px 0 4px;
-  font-size: 15px;
+/* DARK + GOLD GLOW OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 170, 60, 0.25),
+      rgba(0, 0, 0, 0.85) 70%
+    );
+  z-index: 1;
 }
 
-.card p {
-  font-size: 13px;
+/* IMAGE CONTAINER */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* FOOTER */
-.footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 12px;
-  font-size: 12px;
-  margin-top: 25px;
+/* HERO IMAGE */
+.hero-content img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 25px rgba(255, 170, 60, 0.35))
+    drop-shadow(0 0 60px rgba(255, 140, 0, 0.15));
+  animation: heroFade 1.8s ease forwards;
+  opacity: 0;
 }
 
+/* OPENING ANIMATION */
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content img {
+    max-width: 95%;
+  }
+}
