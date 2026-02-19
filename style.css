@@ -48,7 +48,7 @@
 
 /* SEARCH */
 .search-area{
-  position:C;
+  position:absolute;
   top:18vh;
   left:50%;
   transform:translateX(-50%);
@@ -67,14 +67,14 @@
 /* CHOOSE TEXT */
 .choose-text{
   position:absolute;
-  top:90vh;   /* 👈 components se clearly upar */
+  top:40vh;
   left:50%;
   transform:translateX(-50%);
   font-size:8vw;
   color:#fff;
   letter-spacing:0.6vw;
   font-weight:900;
-  text-align:center;
+  text-align:upper center;
   z-index:2;
   animation: glowText 2s infinite alternate;
 }
