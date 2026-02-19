@@ -8,22 +8,6 @@
   <title>I SON SPORTS</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-  <script>
-  const searchInput = document.getElementById("searchInput");
-
-  searchInput.addEventListener("keyup", function () {
-    const value = searchInput.value.toLowerCase();
-    const items = document.querySelectorAll(".game-card");
-
-    items.forEach(item => {
-      const text = item.getAttribute("data-name").toLowerCase();
-      item.style.display = text.includes(value) ? "block" : "none";
-    });
-  });
-</script>
-
-  
 <body>
 
   <!-- TOP BAR -->
