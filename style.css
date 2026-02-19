@@ -67,10 +67,10 @@
 /* CHOOSE YOUR GAME */
 .choose-text{
   position:absolute;
-  top:30vh;
+  top:20vh;
   left:50%;
   transform:translateX(-50%);
-  font-size:8vw;   /* VERY BIG */
+  font-size:vw;   /* VERY BIG */
   color:#fff;
   letter-spacing:0.6vw;
   font-weight:900;
