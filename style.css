@@ -1,33 +1,137 @@
-/* ===== Opening Animation ===== */
-@keyframes fadeZoom {
-  0% {
-    opacity: 0;
-    transform: scale(1.1);
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+/* TOP BAR */
+.top-bar{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  background:#000;
+  z-index:10;
+}
+
+.logo{
+  height:60px;
+}
+
+.brand-name{
+  margin-left:12px;
+  font-size:24px;
+  font-weight:700;
+  color:#4fc3ff;
+  letter-spacing:2px;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.bg{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.7);
+}
+
+/* SEARCH */
+.search-area{
+  position:absolute;
+  top:100px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+}
+
+.search-area input{
+  width:260px;
+  padding:12px;
+  border-radius:25px;
+  border:none;
+  outline:none;
+}
+
+/* CHOOSE TEXT */
+.choose-text{
+  position:absolute;
+  top:42%;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:26px;
+  color:#fff;
+  letter-spacing:3px;
+  font-weight:700;
+  z-index:2;
+  animation: glowText 2s infinite alternate;
+}
+
+/* TEXT HOVER / GLOW */
+@keyframes glowText{
+  from{
+    text-shadow:0 0 6px #fff;
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+  to{
+    text-shadow:
+      0 0 8px #fff,
+      0 0 18px rgba(255,200,120,0.8),
+      0 0 30px rgba(255,180,80,0.7);
   }
 }
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* COMPONENT GRID (2 x 2) */
+.components{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translateX(-50%);
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:25px;
+  z-index:2;
 }
 
-/* Apply animation */
-.hero-img {
-  animation: fadeZoom 1.8s ease-out forwards;
+/* BUTTONS */
+.game-btn{
+  background:none;
+  border:none;
+  cursor:pointer;
 }
 
-.hero-text {
-  animation: fadeUp 1.5s ease-out forwards;
-  animation-delay: 0.8s;
-  opacity: 0;
+.game-btn img{
+  width:110px;
+  transition:transform 0.3s ease, filter 0.3s ease;
+}
+
+.game-btn:hover img{
+  transform:scale(1.1);
+  filter:drop-shadow(0 0 12px gold);
+}
+
+/* DESKTOP ENHANCEMENT */
+@media(min-width:768px){
+  .choose-text{
+    font-size:42px;
+    top:55%;
+  }
+
+  .components{
+    grid-template-columns:repeat(4, 1fr);
+    top:65%;
+  }
+
+  .game-btn img{
+    width:120px;
+  }
 }
