@@ -10,24 +10,24 @@
   position:fixed;
   top:0;
   width:100%;
-  height:90px;
+  height:14vh;
   display:flex;
   align-items:center;
-  padding:0 18px;
+  padding:0 4vw;
   background:#000;
   z-index:10;
 }
 
 .logo{
-  height:80px;
+  height:10vh;
 }
 
 .brand-name{
-  margin-left:14px;
-  font-size:28px;
-  font-weight:800;
+  margin-left:3vw;
+  font-size:7vw;   /* BIG */
+  font-weight:900;
   color:#4fc3ff;
-  letter-spacing:3px;
+  letter-spacing:0.4vw;
 }
 
 /* HERO */
@@ -43,23 +43,23 @@
   width:100%;
   height:100%;
   object-fit:cover;
-  filter:brightness(0.65);
+  filter:brightness(0.6);
 }
 
 /* SEARCH */
 .search-area{
   position:absolute;
-  top:120px;
+  top:18vh;
   left:50%;
   transform:translateX(-50%);
   z-index:2;
 }
 
 .search-area input{
-  width:300px;
-  padding:16px;
-  font-size:16px;
-  border-radius:30px;
+  width:80vw;
+  padding:2.5vh;
+  font-size:4.5vw;
+  border-radius:40px;
   border:none;
   outline:none;
 }
@@ -67,73 +67,53 @@
 /* CHOOSE YOUR GAME */
 .choose-text{
   position:absolute;
-  top:45%;
+  top:40vh;
   left:50%;
   transform:translateX(-50%);
-  font-size:34px;
+  font-size:8vw;   /* VERY BIG */
   color:#fff;
-  letter-spacing:4px;
+  letter-spacing:0.6vw;
   font-weight:900;
   text-align:center;
   z-index:2;
-
   animation: glowText 2s infinite alternate;
 }
 
 @keyframes glowText{
   from{
-    text-shadow:0 0 8px #fff;
+    text-shadow:0 0 10px #fff;
   }
   to{
     text-shadow:
-      0 0 10px #fff,
-      0 0 22px rgba(255,200,120,0.9),
-      0 0 40px rgba(255,170,70,0.8);
+      0 0 14px #fff,
+      0 0 30px rgba(255,200,120,0.9),
+      0 0 55px rgba(255,170,70,0.8);
   }
 }
 
-/* GAME COMPONENTS (BIG TOUCH TARGETS) */
+/* COMPONENTS */
 .components{
   position:absolute;
-  top:55%;
+  top:52vh;
   left:50%;
   transform:translateX(-50%);
   display:grid;
   grid-template-columns:repeat(2, 1fr);
-  gap:35px;
+  gap:6vw;
   z-index:2;
 }
 
-/* BUTTONS */
 .game-btn{
   background:none;
   border:none;
-  cursor:pointer;
 }
 
 .game-btn img{
-  width:150px;          /* 👈 BIG */
+  width:36vw;   /* HUGE BUTTONS */
   transition:transform 0.3s ease, filter 0.3s ease;
 }
 
 .game-btn:hover img{
-  transform:scale(1.15);
-  filter:drop-shadow(0 0 18px gold);
-}
-
-/* DESKTOP */
-@media(min-width:768px){
-  .choose-text{
-    font-size:46px;
-    top:58%;
-  }
-
-  .components{
-    grid-template-columns:repeat(4, 1fr);
-    top:68%;
-  }
-
-  .game-btn img{
-    width:140px;
-  }
+  transform:scale(1.1);
+  filter:drop-shadow(0 0 25px gold);
 }
