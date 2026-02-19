@@ -74,7 +74,7 @@
   color:#fff;
   letter-spacing:0.6vw;
   font-weight:900;
-  text-align:center;
+  text-align: uppercenter;
   z-index:2;
   animation: glowText 2s infinite alternate;
 }
