@@ -31,6 +31,45 @@
       <input type="text" placeholder="Search equipment...">
     </div>
 
+    <!-- SEARCH -->
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search sports equipment..." />
+</div>
+
+<!-- FILTERS -->
+<div class="filters">
+  <button onclick="filterItems('all')">All</button>
+  <button onclick="filterItems('cricket')">Cricket</button>
+  <button onclick="filterItems('football')">Football</button>
+  <button onclick="filterItems('badminton')">Badminton</button>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products" id="productList">
+  <div class="product" data-name="Cricket Bat" data-category="cricket">
+    <img src="images/bat.jpg.webp">
+    <p>Cricket Bat</p>
+  </div>
+
+  <div class="product" data-name="Cricket Gloves" data-category="cricket">
+    <img src="images/gloves.jpj.jpg">
+    <p>Cricket Gloves</p>
+  </div>
+
+  <div class="product" data-name="Football" data-category="football">
+    <img src="images/football.jpg">
+    <p>Football</p>
+  </div>
+
+  <div class="product" data-name="Badminton Racket" data-category="badminton">
+    <img src="images/badminton.jpg">
+    <p>Badminton Racket</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+
     <!-- TEXT -->
     <h1 class="choose-text">CHOOSE YOUR SPORTS</h1>
 
