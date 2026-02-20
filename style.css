@@ -230,4 +230,24 @@ body {
   font-size: 14px;
 }
 
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  background: #1e90ff;
+  color: white;
+}
+
+.actions button:last-child {
+  background: #ff4d6d;
+}
 
