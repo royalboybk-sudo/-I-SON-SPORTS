@@ -1,194 +1,50 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
 }
 
 /* TOP BAR */
-.top-bar{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:14vh;
-  display:flex;
-  align-items:center;
-  padding:0 4vw;
-  background:#000;
-  z-index:10;
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #000;
 }
 
-.logo{
-  height:10vh;
+.logo {
+  width: 80px;
 }
 
-.brand-name{
-  margin-left:3vw;
-  font-size:7vw;
-  font-weight:900;
-  color:#4fc3ff;
-  letter-spacing:0.4vw;
-}
-
-/* HERO */
-.hero{
-  position:relative;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-}
-
-.bg{
-  position:absolute;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(0.6);
+.topbar h1 {
+  color: skyblue;
+  font-size: 26px;
 }
 
 /* SEARCH */
-.search-area{
-  position:absolute;
-  top:18vh;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:2;
-}
-
-.search-area input{
-  width:80vw;
-  padding:2.5vh;
-  font-size:4.5vw;
-  border-radius:40px;
-  border:none;
-  outline:none;
-}
-
-/* CHOOSE TEXT */
-.choose-text{
-  position:absolute;
-  top:30vh;                 /* 👈 gap added */
-  left:50%;
-  transform:translateX(-50%);
-  font-size:8vw;
-  color:#fff;
-  letter-spacing:0.6vw;
-  font-weight:900;
-  text-align:center;
-  z-index:2;
-  animation: glowText 2s infinite alternate;
-
-
-}
-
-@keyframes glowText{
-  from{
-    text-shadow:0 0 10px #fff;
-  }
-  to{
-    text-shadow:
-      0 0 14px #fff,
-      0 0 30px rgba(255,200,120,0.9),
-      0 0 55px rgba(255,170,70,0.8);
-  }
-}
-
-/* COMPONENTS GRID */
-.components{
-  position:absolute;
-  top:48vh;            /* 👈 bottom se thoda upar */
-  left:50%;
-  transform:translateX(-50%);
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:6vw;
-  z-index:2;
-}
-
-/* GAME BUTTONS (ALL SAME SIZE) */
-.game-btn{
-  width:32vw;          /* 👈 balanced size */
-  height:32vw;
-  background:none;
-  border:none;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.game-btn img{
-  width:100%;
-  height:100%;
-  object-fit:contain;  /* 👈 Component2 bhi same size */
-  transition:transform 0.3s ease, filter 0.3s ease;
-}
-
-.game-btn:hover img{
-  transform:scale(1.1);
-  filter:drop-shadow(0 0 25px gold);
-}
-
-
-/* CONTACT BUTTONS */
-.contact-buttons{
-  position:fixed;
-  bottom:3vh;
-  left:50%;
-  transform:translateX(-50%);
-  width:90vw;
-  display:flex;
-  gap:4vw;
-  z-index:20;
-}
-
-.contact-buttons a{
-  flex:1;
-  text-align:center;
-  padding:2.2vh 0;
-  font-size:5vw;
-  font-weight:800;
-  border-radius:14px;
-  text-decoration:none;
-  color:#fff;
-}
-
-/* CALL */
-.call-btn{
-  background:#1e88e5;
-  box-shadow:0 0 18px rgba(30,136,229,0.7);
-}
-
-/* WHATSAPP */
-.whatsapp-btn{
-  background:#25D366;
-  box-shadow:0 0 18px rgba(37,211,102,0.7);
-}
-
-/* PRESS EFFECT */
-.contact-buttons a:active{
-  transform:scale(0.96);
-}
-body {
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .search-box {
   text-align: center;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .search-box input {
   width: 85%;
   padding: 14px;
-  font-size: 16px;
   border-radius: 25px;
   border: none;
+  font-size: 16px;
 }
 
+/* TITLE */
+.choose {
+  text-align: center;
+  margin: 20px 0 10px;
+  color: #f5d27a;
+}
+
+/* FILTERS */
 .filters {
   display: flex;
   justify-content: center;
@@ -202,19 +58,19 @@ body {
   border: none;
   background: #1e90ff;
   color: white;
-  font-size: 14px;
 }
 
+/* PRODUCTS */
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  padding: 15px;
+  gap: 16px;
+  padding: 16px;
 }
 
 .product {
   background: #111;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 10px;
   text-align: center;
 }
@@ -226,28 +82,24 @@ body {
 }
 
 .product p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin: 8px 0;
 }
 
+/* ACTIONS */
 .actions {
   display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  gap: 8px;
 }
 
 .actions button {
   flex: 1;
-  margin: 0 4px;
   padding: 8px;
-  border: none;
   border-radius: 20px;
-  font-size: 13px;
-  background: #1e90ff;
+  border: none;
   color: white;
+  background: #1e90ff;
 }
 
 .actions button:last-child {
   background: #ff4d6d;
 }
-
