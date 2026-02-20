@@ -1,0 +1,26 @@
+body { background:#000; color:#fff; font-family:Arial }
+.topbar { display:flex; align-items:center; padding:10px }
+.topbar img { width:60px }
+.topbar h1 { color:skyblue; margin-left:10px }
+.cart { margin-left:auto }
+
+#productList {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  padding:15px;
+}
+.card {
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  text-align:center;
+}
+.card img { width:100%; height:130px; object-fit:contain }
+button {
+  background:#1e90ff;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  border-radius:20px;
+}
