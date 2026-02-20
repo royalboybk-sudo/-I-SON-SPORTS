@@ -1,25 +1,20 @@
 const searchInput = document.getElementById("searchInput");
 const products = document.querySelectorAll(".product");
 
-searchInput.addEventListener("keyup", function () {
+searchInput.addEventListener("keyup", () => {
   const value = searchInput.value.toLowerCase();
-
-  products.forEach(product => {
-    const name = product.getAttribute("data-name").toLowerCase();
-    product.style.display = name.includes(value) ? "block" : "none";
+  products.forEach(p => {
+    const name = p.dataset.name.toLowerCase();
+    p.style.display = name.includes(value) ? "block" : "none";
   });
 });
 
 function filterItems(category) {
-  products.forEach(product => {
-    if (category === "all") {
-      product.style.display = "block";
-    } else {
-      product.style.display =
-        product.getAttribute("data-category") === category
-          ? "block"
-          : "none";
-    }
+  products.forEach(p => {
+    p.style.display =
+      category === "all" || p.dataset.category === category
+        ? "block"
+        : "none";
   });
 }
 
@@ -35,4 +30,3 @@ function likeItem(btn) {
   btn.innerText = "❤️ Liked";
   btn.style.background = "#ff1e56";
 }
-
