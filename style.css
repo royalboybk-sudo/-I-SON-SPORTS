@@ -11,7 +11,6 @@ body {
   align-items: center;
   gap: 12px;
   padding: 12px;
-  background: #000;
 }
 
 .logo {
@@ -21,6 +20,21 @@ body {
 .topbar h1 {
   color: skyblue;
   font-size: 26px;
+}
+
+/* CART */
+.cart {
+  margin-left: auto;
+  font-size: 20px;
+  background: #111;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.cart span {
+  background: red;
+  padding: 2px 8px;
+  border-radius: 50%;
 }
 
 /* SEARCH */
