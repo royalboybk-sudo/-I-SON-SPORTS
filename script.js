@@ -22,3 +22,17 @@ function filterItems(category) {
     }
   });
 }
+
+let cart = [];
+
+function addToCart(item) {
+  cart.push(item);
+  alert(item + " added to cart 🛒");
+  console.log(cart);
+}
+
+function likeItem(btn) {
+  btn.innerText = "❤️ Liked";
+  btn.style.background = "#ff1e56";
+}
+
