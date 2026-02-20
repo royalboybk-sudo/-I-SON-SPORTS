@@ -1,79 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I SON SPORTS</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
-  <img src="images/logo.png" class="logo">
+  <img src="images/logo.png">
   <h1>I SON SPORTS</h1>
-
-  <div class="cart">
-    🛒 <span id="cartCount">0</span>
-  </div>
+  <div class="cart">🛒 <span id="cartCount">0</span></div>
 </header>
 
-<!-- SEARCH -->
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search sports equipment..." />
-</div>
+<input id="search" placeholder="Search product">
 
-<h2 class="choose">CHOOSE YOUR GAME</h2>
+<div id="productList"></div>
 
-<!-- FILTERS -->
-<div class="filters">
-  <button onclick="filterItems('all')">All</button>
-  <button onclick="filterItems('cricket')">Cricket</button>
-  <button onclick="filterItems('football')">Football</button>
-  <button onclick="filterItems('badminton')">Badminton</button>
-</div>
-
-<!-- PRODUCTS -->
-<div class="products">
-
-  <div class="product" data-name="Cricket Bat" data-category="cricket">
-    <img src="images/bat.jpg.webp">
-    <p>Cricket Bat</p>
-    <div class="actions">
-      <button onclick="addToCart('Cricket Bat')">🛒 Add</button>
-      <button onclick="likeItem(this)">❤️</button>
-    </div>
-  </div>
-
-  <div class="product" data-name="Cricket Gloves" data-category="cricket">
-    <img src="images/gloves.jpj.jpg">
-    <p>Cricket Gloves</p>
-    <div class="actions">
-      <button onclick="addToCart('Cricket Gloves')">🛒 Add</button>
-      <button onclick="likeItem(this)">❤️</button>
-    </div>
-  </div>
-
-  <div class="product" data-name="Football" data-category="football">
-    <img src="images/football.jpg">
-    <p>Football</p>
-    <div class="actions">
-      <button onclick="addToCart('Football')">🛒 Add</button>
-      <button onclick="likeItem(this)">❤️</button>
-    </div>
-  </div>
-
-  <div class="product" data-name="Badminton Racket" data-category="badminton">
-    <img src="images/badminton.jpg">
-    <p>Badminton Racket</p>
-    <div class="actions">
-      <button onclick="addToCart('Badminton Racket')">🛒 Add</button>
-      <button onclick="likeItem(this)">❤️</button>
-    </div>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
