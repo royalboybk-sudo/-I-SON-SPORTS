@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- 🔴 MOST IMPORTANT FOR MOBILE -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>I SON SPORTS</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- TOP BAR -->
-  <header class="top-bar">
-    <img src="images/logo.png" class="logo">
-    <span class="brand-name">I SON SPORTS</span>
-  </header>
+<!-- TOP BAR -->
+<header class="topbar">
+  <img src="images/logo.png" class="logo">
+  <h1>I SON SPORTS</h1>
+</header>
 
-  <!-- CONTACT BUTTONS -->
-<div class="contact-buttons">
-  <a href="tel:+91 9693644135" class="call-btn">📞 Call Us</a>
-  <a href="https://wa.me/91 9693644135" target="_blank" class="whatsapp-btn">💬 WhatsApp Us</a>
-</div>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <img src="images/Frame1.png" class="bg">
-
-    <!-- SEARCH BAR -->
-    <div class="search-area">
-      <input type="text" placeholder="Search equipment...">
-    </div>
-
-    <!-- SEARCH -->
+<!-- SEARCH -->
 <div class="search-box">
   <input type="text" id="searchInput" placeholder="Search sports equipment..." />
 </div>
+
+<h2 class="choose">CHOOSE YOUR GAME</h2>
 
 <!-- FILTERS -->
 <div class="filters">
@@ -46,49 +31,45 @@
 
 <!-- PRODUCTS -->
 <div class="products" id="productList">
+
   <div class="product" data-name="Cricket Bat" data-category="cricket">
     <img src="images/bat.jpg.webp">
     <p>Cricket Bat</p>
+    <div class="actions">
+      <button onclick="addToCart('Cricket Bat')">🛒 Add</button>
+      <button onclick="likeItem(this)">❤️</button>
+    </div>
   </div>
 
   <div class="product" data-name="Cricket Gloves" data-category="cricket">
     <img src="images/gloves.jpj.jpg">
     <p>Cricket Gloves</p>
+    <div class="actions">
+      <button onclick="addToCart('Cricket Gloves')">🛒 Add</button>
+      <button onclick="likeItem(this)">❤️</button>
+    </div>
   </div>
 
   <div class="product" data-name="Football" data-category="football">
     <img src="images/football.jpg">
     <p>Football</p>
+    <div class="actions">
+      <button onclick="addToCart('Football')">🛒 Add</button>
+      <button onclick="likeItem(this)">❤️</button>
+    </div>
   </div>
 
   <div class="product" data-name="Badminton Racket" data-category="badminton">
     <img src="images/badminton.jpg">
     <p>Badminton Racket</p>
+    <div class="actions">
+      <button onclick="addToCart('Badminton Racket')">🛒 Add</button>
+      <button onclick="likeItem(this)">❤️</button>
+    </div>
   </div>
+
 </div>
 
 <script src="script.js"></script>
-
-
-    <!-- TEXT -->
-    <h1 class="choose-text">CHOOSE YOUR SPORTS</h1>
-
-    <!-- COMPONENTS -->
-   <div class="components">
-  <a href="cricket.html" class="game-btn">
-    <img src="images/Component1.svg">
-  </a>
-
-  <a href="football.html" class="game-btn">
-    <img src="images/Component2.svg">
-  </a>
-
-  <a href="badminton.html" class="game-btn">
-    <img src="images/Component3.svg">
-  </a>
-
-  <a href="fitness.html" class="game-btn">
-    <img src="images/Component4.svg">
-  </a>
-</div>
-
+</body>
+</html>
